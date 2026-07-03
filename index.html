@@ -20,11 +20,11 @@
             }
         }
     </script>
-    <!-- FontAwesome Icons for Socials -->
+    <!-- FontAwesome Icons for Socials and Globe -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght=300;400;500;600&display=swap"
         rel="stylesheet">
     <style>
         body {
@@ -37,8 +37,9 @@
             font-family: 'Cinzel', serif;
         }
 
-        /* Google Translator Custom Hide Header */
-        .goog-te-banner-frame.skiptranslate {
+        /* Hide Google Translate Top Bar & Banner Frames */
+        .goog-te-banner-frame.skiptranslate,
+        .goog-banner-frame {
             display: none !important;
         }
 
@@ -46,15 +47,32 @@
             top: 0px !important;
         }
 
+        .goog-te-gadget {
+            color: transparent !important;
+            font-size: 0px !important;
+        }
+
+        .goog-te-gadget .goog-te-combo {
+            margin: 0px !important;
+        }
+
+        /* Premium Language Dropdown styling */
         #google_translate_element select {
             background-color: #111111;
             color: #ffffff;
             border: 1px solid #27272a;
-            padding: 4px 8px;
+            padding: 6px 12px;
             font-size: 11px;
             letter-spacing: 0.1em;
             outline: none;
             text-transform: uppercase;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        #google_translate_element select:hover {
+            border-color: #D4AF37;
         }
     </style>
 </head>
@@ -66,10 +84,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-24">
 
-                <!-- Brand Identity / Logo -->
+                <!-- Brand Identity / Logo (Direct Image Link) -->
                 <a href="index.html" class="flex items-center gap-3 group">
-                    <img src="assets/images/bj logo.jpg" alt="BJ Architects"
-                        class="w-12 h-12 object-cover border border-zincBorder group-hover:border-gold transition duration-500">
+                    <img src="bj logo.jpg" alt="BJ Architects"
+                        class="w-14 h-14 object-cover border border-zincBorder group-hover:border-gold transition duration-500">
                     <div class="flex flex-col">
                         <span class="text-lg font-serif tracking-[0.2em] text-white group-hover:text-gold transition">BJ
                             ARCHITECTS</span>
@@ -92,18 +110,19 @@
                         class="text-xs uppercase tracking-[0.2em] text-zinc-400 hover:text-white transition">Contact</a>
                 </nav>
 
-                <!-- Technical Tools & Translator Integration -->
+                <!-- Technical Tools & Translator Integration (Email Removed) -->
                 <div class="flex items-center gap-6">
                     <div class="hidden xl:flex flex-col text-right">
                         <a href="tel:+923084858052"
                             class="text-xs font-bold text-white tracking-widest hover:text-gold transition">+92 308
                             4858052</a>
-                        <a href="mailto:bjarchitects.pk@gmail.com"
-                            class="text-[10px] text-zinc-500 tracking-wider hover:text-zinc-300 transition">bjarchitects.pk@gmail.com</a>
                     </div>
 
-                    <!-- Premium Language Selector Matrix -->
-                    <div id="google_translate_element" class="border border-zincBorder/60 p-1"></div>
+                    <!-- Premium Language Selector Matrix with Icon -->
+                    <div class="flex items-center gap-2 border border-zincBorder/60 p-1 bg-[#111111]">
+                        <span class="text-gold text-xs pl-2"><i class="fa-solid fa-globe"></i></span>
+                        <div id="google_translate_element"></div>
+                    </div>
                 </div>
 
             </div>
@@ -113,9 +132,9 @@
 
     <!-- ================= ULTRA-PREMIUM HERO SECTION ================= -->
     <section class="relative w-full h-[85vh] min-h-[600px] flex items-center justify-center bg-black overflow-hidden">
-        <!-- Background Monolithic Architecture Image Asset -->
+        <!-- Background Monolithic Architecture Image Asset (Direct Root File) -->
         <div class="absolute inset-0 w-full h-full">
-            <img src="assets/images/hero-blueprint.jpg" alt="BJ Architects Structural Matrix"
+            <img src="hero-blueprint.jpg" alt="BJ Architects Structural Matrix"
                 class="w-full h-full object-cover opacity-35 filter brightness-[70%] contrast-[110%]">
             <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black"></div>
         </div>
@@ -148,11 +167,6 @@
                 </a>
             </div>
         </div>
-
-        <!-- Subtle Line Matrix Background Styling -->
-        <div
-            class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-zincBorder to-transparent">
-        </div>
     </section>
 
 
@@ -166,8 +180,6 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-            <!-- Service item 1: 3D Visualization -->
             <div class="bg-cardBg border border-zincBorder p-8 space-y-4 hover:border-gold transition duration-500">
                 <div class="text-gold text-2xl"><i class="fa-solid fa-cubes"></i></div>
                 <h3 class="text-sm font-serif tracking-widest text-white uppercase">3D Architectural Modeling</h3>
@@ -175,7 +187,6 @@
                     walkthroughs mapping premium interior and exterior concepts.</p>
             </div>
 
-            <!-- Service item 2: BIM & Revit -->
             <div class="bg-cardBg border border-zincBorder p-8 space-y-4 hover:border-gold transition duration-500">
                 <div class="text-gold text-2xl"><i class="fa-solid fa-drafting-compass"></i></div>
                 <h3 class="text-sm font-serif tracking-widest text-white uppercase">BIM & Revit Drafting</h3>
@@ -183,7 +194,6 @@
                     modeling coordinating structural integrity and spatial dynamics.</p>
             </div>
 
-            <!-- Service item 3: MEP Engineering -->
             <div class="bg-cardBg border border-zincBorder p-8 space-y-4 hover:border-gold transition duration-500">
                 <div class="text-gold text-2xl"><i class="fa-solid fa-bolt-lightning"></i></div>
                 <h3 class="text-sm font-serif tracking-widest text-white uppercase">Mechanical & Electrical (MEP)</h3>
@@ -191,14 +201,12 @@
                     distribution blueprints, and integrated plumbing designs.</p>
             </div>
 
-            <!-- Service item 4: Interior & Exterior Space Planning -->
             <div class="bg-cardBg border border-zincBorder p-8 space-y-4 hover:border-gold transition duration-500">
                 <div class="text-gold text-2xl"><i class="fa-solid fa-house-chimney"></i></div>
                 <h3 class="text-sm font-serif tracking-widest text-white uppercase">Full Scale Turnkey Layouts</h3>
                 <p class="text-xs text-zinc-500 tracking-wide leading-relaxed">Custom home styling architectural details
                     crafted for luxury apartments and marriage hall layouts.</p>
             </div>
-
         </div>
     </section>
 
@@ -218,11 +226,10 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-                <!-- Project Item 1 -->
+                <!-- Project Item 1 (Direct Root Image Link) -->
                 <div class="group relative overflow-hidden bg-black border border-zincBorder">
                     <div class="h-64 overflow-hidden relative">
-                        <img src="assets/images/project-dha.jpg" alt="DHA Luxury Villa Layout"
+                        <img src="project-dha.jpg" alt="DHA Luxury Villa Layout"
                             class="w-full h-full object-cover transition duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
                     </div>
                     <div class="p-6 space-y-2">
@@ -235,10 +242,10 @@
                     </div>
                 </div>
 
-                <!-- Project Item 2 -->
+                <!-- Project Item 2 (Direct Root Image Link) -->
                 <div class="group relative overflow-hidden bg-black border border-zincBorder">
                     <div class="h-64 overflow-hidden relative">
-                        <img src="assets/images/project-hall.jpg" alt="Luxury Marriage Hall Blueprint"
+                        <img src="project-hall.jpg" alt="Luxury Marriage Hall Blueprint"
                             class="w-full h-full object-cover transition duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
                     </div>
                     <div class="p-6 space-y-2">
@@ -251,10 +258,10 @@
                     </div>
                 </div>
 
-                <!-- Project Item 3 -->
+                <!-- Project Item 3 (Direct Root Image Link) -->
                 <div class="group relative overflow-hidden bg-black border border-zincBorder">
                     <div class="h-64 overflow-hidden relative">
-                        <img src="assets/images/project-apartment.jpg" alt="International Apartment Complex"
+                        <img src="project-apartment.jpg" alt="International Apartment Complex"
                             class="w-full h-full object-cover transition duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
                     </div>
                     <div class="p-6 space-y-2">
@@ -266,7 +273,6 @@
                             centralized HVAC calculations, and BIM software layout sync.</p>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -281,8 +287,6 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-            <!-- Review 1 -->
             <div class="bg-cardBg border border-zincBorder p-8 md:p-10 space-y-6 relative">
                 <span class="text-6xl text-zinc-800 font-serif absolute top-4 right-6 pointer-events-none">“</span>
                 <p class="text-xs text-zinc-400 tracking-wide leading-relaxed font-light italic">
@@ -303,7 +307,6 @@
                 </div>
             </div>
 
-            <!-- Review 2 -->
             <div class="bg-cardBg border border-zincBorder p-8 md:p-10 space-y-6 relative">
                 <span class="text-6xl text-zinc-800 font-serif absolute top-4 right-6 pointer-events-none">“</span>
                 <p class="text-xs text-zinc-400 tracking-wide leading-relaxed font-light italic">
@@ -324,7 +327,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -333,11 +335,11 @@
     <footer class="w-full bg-black border-t border-zincBorder pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
 
-            <!-- Col 1: Brand & Logo Grid -->
+            <!-- Col 1: Brand & Logo Grid (Direct Link Fixed) -->
             <div class="space-y-4">
                 <div class="flex items-center gap-3">
-                    <img src="assets/images/bj logo.jpg" alt="BJ Architects Footer Logo"
-                        class="w-10 h-10 object-cover border border-zincBorder">
+                    <img src="bj logo.jpg" alt="BJ Architects Footer Logo"
+                        class="w-12 h-12 object-cover border border-zincBorder">
                     <span class="text-md font-serif tracking-widest text-white uppercase">BJ ARCHITECTS</span>
                 </div>
                 <p class="text-xs text-zinc-500 tracking-wide leading-relaxed">
@@ -375,7 +377,7 @@
                 <h4 class="text-xs font-serif uppercase tracking-widest text-white">Digital Nodes</h4>
                 <div class="flex items-center gap-4 text-zinc-500 text-lg">
                     <a href="#" class="hover:text-gold transition"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="hover:text-gold transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-gold transition"><i class="fa-brands fa-images"></i></a>
                     <a href="#" class="hover:text-gold transition"><i class="fa-brands fa-linkedin-in"></i></a>
                     <a href="#" class="hover:text-gold transition"><i class="fa-brands fa-pinterest-p"></i></a>
                 </div>
@@ -390,12 +392,12 @@
     </footer>
 
 
-    <!-- ================= GOOGLE TRANSLATOR SCRIPT ASYNC ================= -->
+    <!-- ================= GOOGLE TRANSLATOR SCRIPT ASYNC (10 SELECTED LANGUAGES) ================= -->
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
                 pageLanguage: 'en',
-                includedLanguages: 'en,fr,es,de,it,zh-CN,ar,ur',
+                includedLanguages: 'en,en-US,en-GB,hi,ur,ar,zh-CN,tr,ja,fr,ru',
                 layout: google.translate.TranslateElement.InlineLayout.SIMPLE
             }, 'google_translate_element');
         }
