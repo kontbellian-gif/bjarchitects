@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Log | BJ Architects — Master Infrastructure & BIM Assets</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#ce9847',
+                        cardBg: '#111111',
+                        zincBorder: '#27272a'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            top: 0px !important;
+            position: static !important;
+        }
+
+        .font-serif {
+            font-family: 'Cinzel', serif;
+        }
+
+        /* Strict Google Translate Layout Overrides */
+        .skiptranslate,
+        .goog-te-banner-frame,
+        #goog-gt-tt,
+        .goog-te-balloon-frame {
+            display: none !important;
+            visibility: hidden !important;
+        }
+
+        .goog-text-highlight {
+            background: none !important;
+            box-shadow: none !important;
+        }
+
+        #google_translate_element select {
+            background-color: #111111 !important;
+            color: #ffffff !important;
+            border: 1px solid #27272a !important;
+            padding: 4px 8px !important;
+            font-size: 11px !important;
+            max-width: 130px !important;
+            outline: none !important;
+            cursor: pointer !important;
+            font-family: 'Montserrat', sans-serif !important;
+            transition: all 0.3s ease;
+        }
+
+        #google_translate_element select:hover {
+            border-color: #ce9847 !important;
+        }
+
+        .goog-te-gadget {
+            font-size: 0px !important;
+            color: transparent !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= STICKY CONTACT NODES (WHATSAPP & CALL) ================= -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+        <a href="tel:+923084858052"
+            class="bg-zinc-900 border border-zincBorder text-[#ce9847] w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:bg-[#ce9847] hover:text-black transition duration-300 text-xl"
+            title="Call Now">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+        <a href="https://wa.me/923084858052" target="_blank"
+            class="bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition duration-300 text-2xl"
+            title="WhatsApp Chat">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- ================= HEADER SECTION ================= -->
+    <header class="w-full bg-black border-b border-zincBorder sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-24">
+
+                <!-- Brand Identity / Logo -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="bj logo.jpg" alt="BJ Architects"
+                        class="w-14 h-14 object-cover border border-zincBorder group-hover:border-gold transition duration-500">
+                    <div class="flex flex-col">
+                        <span
+                            class="text-md md:text-lg font-serif tracking-[0.2em] text-white group-hover:text-gold transition">BJ
+                            ARCHITECTS</span>
+                        <span class="text-[9px] uppercase tracking-[0.35em] text-zinc-500">Engineering & Design</span>
+                    </div>
+                </a>
+
+                <!-- Structural Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-6 xl:space-x-8">
+                    <a href="index.html"
+                        class="text-xs uppercase tracking-[0.2em] text-zinc-400 hover:text-white transition">Home</a>
+                    <a href="about.html"
+                        class="text-xs uppercase tracking-[0.2em] text-zinc-400 hover:text-white transition">About</a>
+                    <a href="services.html"
+                        class="text-xs uppercase tracking-[0.2em] text-zinc-400 hover:text-white transition">Services</a>
+                    <a href="projects.html"
+                        class="text-xs uppercase tracking-[0.2em] text-gold font-semibold">Projects</a>
+                    <a href="portfolio.html"
+                        class="text-xs uppercase tracking-[0.2em] text-zinc-400 hover:text-white transition">Portfolio</a>
+                    <a href="contact.html"
+                        class="text-xs uppercase tracking-[0.2em] text-zinc-400 hover:text-white transition">Contact</a>
+                </nav>
+
+                <!-- Custom Translator Matrix Inside Header -->
+                <div class="flex items-center gap-4">
+                    <div class="hidden sm:flex flex-col text-right">
+                        <a href="tel:+923084858052"
+                            class="text-xs font-bold text-white tracking-widest hover:text-gold transition">+92 308
+                            4858052</a>
+                    </div>
+                    <div class="flex items-center gap-1 bg-[#111111] border border-zincBorder px-2 py-1 rounded">
+                        <span class="text-gold text-xs"><i class="fa-solid fa-globe"></i></span>
+                        <div id="google_translate_element"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= SUB-HERO BANNER ================= -->
+    <section
+        class="relative w-full h-[40vh] min-h-[300px] flex items-center justify-center bg-black overflow-hidden border-b border-zincBorder">
+        <div class="absolute inset-0 w-full h-full">
+            <img src="bj logo.jpg" alt="BJ Architects Structural Framework"
+                class="w-full h-full object-cover opacity-15 filter brightness-[40%] blur-[1px]">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black"></div>
+        </div>
+        <div class="relative z-10 text-center space-y-3">
+            <span class="text-[10px] uppercase tracking-[0.4em] text-gold font-bold">CASE DIRECTORY LOG</span>
+            <h1 class="text-3xl md:text-5xl font-serif text-white tracking-widest uppercase">MASTER REGISTRY</h1>
+            <div class="w-16 h-[1px] bg-gold mx-auto mt-2"></div>
+        </div>
+    </section>
+
+    <!-- ================= PROJECTS EXPANDED REGISTRY GRID ================= -->
+    <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <!-- Project 1: DHA Mega Residential Unit -->
+            <div
+                class="group bg-cardBg border border-zincBorder overflow-hidden hover:border-gold transition duration-500 flex flex-col justify-between">
+                <div>
+                    <div class="h-64 overflow-hidden relative border-b border-zincBorder">
+                        <img src="bj logo.jpg" alt="DHA Mega Residential Unit"
+                            class="w-full h-full object-cover opacity-75 group-hover:opacity-100 group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-8 space-y-3">
+                        <div
+                            class="flex justify-between items-center text-[10px] uppercase tracking-widest font-bold text-gold">
+                            <span>DHA Phase 6 / Pakistan</span>
+                            <span class="bg-gold/10 border border-gold/20 px-2 py-0.5 text-[9px]">COMPLETED</span>
+                        </div>
+                        <h3 class="text-md font-serif text-white uppercase tracking-wider">Premium Mega Residential Unit
+                        </h3>
+                        <p class="text-xs text-zinc-400 tracking-wide leading-relaxed font-light">
+                            A grand residential structural blueprint executing custom spatial geometry. Delivered
+                            complete architectural detailing, highly structured 3D elevations, and fully integrated MEP
+                            distribution schematics coordinated for high-tier building protocols.
+                        </p>
+                    </div>
+                </div>
+                <div class="p-8 pt-0">
+                    <div
+                        class="border-t border-zincBorder/60 pt-4 grid grid-cols-2 gap-4 text-[10px] uppercase tracking-wider text-zinc-500">
+                        <div><span class="text-zinc-600 block">Scope:</span> Full Engineering</div>
+                        <div><span class="text-zinc-600 block">System:</span> BIM Compliant</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Grand Imperial Marriage Hall -->
+            <div
+                class="group bg-cardBg border border-zincBorder overflow-hidden hover:border-gold transition duration-500 flex flex-col justify-between">
+                <div>
+                    <div class="h-64 overflow-hidden relative border-b border-zincBorder">
+                        <img src="bj logo.jpg" alt="Grand Imperial Marriage Hall"
+                            class="w-full h-full object-cover opacity-75 group-hover:opacity-100 group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-8 space-y-3">
+                        <div
+                            class="flex justify-between items-center text-[10px] uppercase tracking-widest font-bold text-gold">
+                            <span>Commercial / Infrastructure</span>
+                            <span class="bg-gold/10 border border-gold/20 px-2 py-0.5 text-[9px]">COMPLETED</span>
+                        </div>
+                        <h3 class="text-md font-serif text-white uppercase tracking-wider">Grand Imperial Marriage Hall
+                        </h3>
+                        <p class="text-xs text-zinc-400 tracking-wide leading-relaxed font-light">
+                            Structural open-span space layout optimization engineered to manage high occupant limits.
+                            Focused on architectural roof truss execution layout patterns, advanced thermodynamic HVAC
+                            duct routing, and luxury public hall styling systems.
+                        </p>
+                    </div>
+                </div>
+                <div class="p-8 pt-0">
+                    <div
+                        class="border-t border-zincBorder/60 pt-4 grid grid-cols-2 gap-4 text-[10px] uppercase tracking-wider text-zinc-500">
+                        <div><span class="text-zinc-600 block">Scope:</span> Open-Span Truss</div>
+                        <div><span class="text-zinc-600 block">System:</span> HVAC Optimized</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: High-Rise Apartment Complex -->
+            <div
+                class="group bg-cardBg border border-zincBorder overflow-hidden hover:border-gold transition duration-500 flex flex-col justify-between">
+                <div>
+                    <div class="h-64 overflow-hidden relative border-b border-zincBorder">
+                        <img src="bj logo.jpg" alt="High-Rise Apartment Complex"
+                            class="w-full h-full object-cover opacity-75 group-hover:opacity-100 group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-8 space-y-3">
+                        <div
+                            class="flex justify-between items-center text-[10px] uppercase tracking-widest font-bold text-gold">
+                            <span>International Hubs</span>
+                            <span class="bg-gold/10 border border-gold/20 px-2 py-0.5 text-[9px]">COMPLETED</span>
+                        </div>
+                        <h3 class="text-md font-serif text-white uppercase tracking-wider">High-Rise Apartment Complex
+                        </h3>
+                        <p class="text-xs text-zinc-400 tracking-wide leading-relaxed font-light">
+                            A multi-tier global infrastructure development requiring advanced structural discipline.
+                            Engineered multi-capacity commercial plumbing arrays, high-voltage panel routing layouts,
+                            and cross-disciplinary framework execution synced using Revit.
+                        </p>
+                    </div>
+                </div>
+                <div class="p-8 pt-0">
+                    <div
+                        class="border-t border-zincBorder/60 pt-4 grid grid-cols-2 gap-4 text-[10px] uppercase tracking-wider text-zinc-500">
+                        <div><span class="text-zinc-600 block">Scope:</span> MEP Matrix</div>
+                        <div><span class="text-zinc-600 block">System:</span> Revit Drafted</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- ================= QUICK MEETING MATRIX BLOCK ================= -->
+    <section class="py-20 bg-black border-t border-zincBorder">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-10">
+
+            <div class="space-y-3">
+                <span class="text-[10px] uppercase tracking-[0.4em] text-gold font-bold">ACCELERATED CONVERSATION
+                    CHANNEL</span>
+                <h2 class="text-2xl md:text-3xl font-serif text-white tracking-widest uppercase">DISCUSS YOUR BLUEPRINT
+                    IN 10 MINUTES</h2>
+                <div class="w-12 h-[1px] bg-gold mx-auto mt-2"></div>
+                <p class="text-xs text-zinc-500 max-w-xl mx-auto font-light leading-relaxed">
+                    Hamare architectural layouts pasand aaye? Direct line open karein. Apne project metrics drop karein
+                    aur hum aapse instant call coordinate karenge.
+                </p>
+            </div>
+
+            <!-- Ultra Fast Quick Response Form -->
+            <div class="bg-cardBg border border-zincBorder p-6 md:p-8 rounded text-left">
+                <form action="#" method="POST" class="grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
+
+                    <!-- Quick Name -->
+                    <div class="space-y-2">
+                        <label class="text-[9px] uppercase tracking-widest text-zinc-400 font-medium">Your Name</label>
+                        <input type="text" required placeholder="e.g., Ali Hamza"
+                            class="w-full bg-black border border-zincBorder px-4 py-3 text-xs text-white placeholder-zinc-700 focus:outline-none focus:border-gold transition">
+                    </div>
+
+                    <!-- Quick Node Contact -->
+                    <div class="space-y-2">
+                        <label class="text-[9px] uppercase tracking-widest text-zinc-400 font-medium">WhatsApp /
+                            Phone</label>
+                        <input type="tel" required placeholder="+92 300 0000000"
+                            class="w-full bg-black border border-zincBorder px-4 py-3 text-xs text-white placeholder-zinc-700 focus:outline-none focus:border-gold transition">
+                    </div>
+
+                    <!-- Instant Dispatch -->
+                    <div>
+                        <button type="submit"
+                            class="w-full bg-zinc-900 border border-zincBorder text-gold uppercase tracking-[0.2em] text-xs font-semibold py-3.5 hover:bg-gold hover:text-black transition duration-300">
+                            Request Quick Call
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= FOOTER SECTION ================= -->
+    <footer class="w-full bg-black border-t border-zincBorder pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+
+            <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                    <img src="bj logo.jpg" alt="BJ Architects Footer Logo"
+                        class="w-12 h-12 object-cover border border-zincBorder">
+                    <span class="text-md font-serif tracking-widest text-white uppercase">BJ ARCHITECTS</span>
+                </div>
+                <p class="text-xs text-zinc-500 tracking-wide leading-relaxed">
+                    12 years of certified engineering authority delivering architectural layouts, interior/exterior
+                    blueprints, and MEP systems globally.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <h4 class="text-xs font-serif uppercase tracking-widest text-white">System Directory</h4>
+                <ul class="space-y-2 text-[11px] uppercase tracking-wider text-zinc-500">
+                    <li><a href="about.html" class="hover:text-gold transition">About Firm</a></li>
+                    <li><a href="services.html" class="hover:text-gold transition">Core Disciplines</a></li>
+                    <li><a href="projects.html" class="hover:text-gold transition">Project Log</a></li>
+                    <li><a href="portfolio.html" class="hover:text-gold transition">BIM Portfolio</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-4">
+                <h4 class="text-xs font-serif uppercase tracking-widest text-white">Contact Matrix</h4>
+                <ul class="space-y-2 text-xs text-zinc-500 tracking-wide">
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-gold text-[10px]"></i> +92 308
+                        4858052</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-envelope text-gold text-[10px]"></i>
+                        bjarchitects.pk@gmail.com</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-gold text-[10px]"></i>
+                        DHA & International Hubs</li>
+                </ul>
+            </div>
+
+            <div class="space-y-4">
+                <h4 class="text-xs font-serif uppercase tracking-widest text-white">Digital Nodes</h4>
+                <div class="flex items-center gap-4 text-zinc-500 text-lg">
+                    <a href="#" class="hover:text-gold transition"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-gold transition"><i class="fa-brands fa-images"></i></a>
+                    <a href="#" class="hover:text-gold transition"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="hover:text-gold transition"><i class="fa-brands fa-pinterest-p"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-zincBorder/40 pt-6 text-center">
+            <p class="text-[10px] uppercase tracking-widest text-zinc-600">&copy; 2026 BJ Architects. Engineering
+                Architecture with Absolute Perfection.</p>
+        </div>
+    </footer>
+
+    <!-- ================= GOOGLE TRANSLATOR SCRIPT ASYNC ================= -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,en-US,en-GB,hi,ur,ar,zh-CN,tr,ja,fr,ru',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+
+</html>
